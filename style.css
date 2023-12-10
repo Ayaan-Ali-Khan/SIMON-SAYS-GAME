@@ -48,3 +48,11 @@ h1{
         text-align: center;
     }
 }
+.start{
+    border-radius: 0.75rem;
+    color: white;
+    background-color: green;
+    height: 3rem;
+    width: 7rem;
+    font-size: 1.25rem;
+}
