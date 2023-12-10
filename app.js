@@ -5,8 +5,9 @@ let allBtns = document.querySelectorAll(".btn")
 let started = false;
 let level = 0;
 let btns = ["green", "yellow", "red", "blue"];
+let st = document.querySelector(".start");
 
-document.addEventListener("keypress", function(){
+st.addEventListener("click", function(){
     if(started==false){
         console.log("Game started");
         started = true;
@@ -56,7 +57,7 @@ function checkAns(idx){
         if(level>highScore){
             highScore = level;
         }
-        h2.innerHTML = `Game Over! Your score was ${level}<br>Press any key to start the game<br>HIGH SCORE: ${highScore}`
+        h2.innerHTML = `Game Over! Your score was ${level}<br>HIGH SCORE: ${highScore}`;
         reset();
     }
 }
@@ -77,4 +78,5 @@ function reset(){
     gameSeq = [];
     started = false;
     level = 0;
+    st.innerText = "RESET";
 }
